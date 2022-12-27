@@ -1,0 +1,41 @@
+.footer {
+  background: $footer-bg;
+  padding-top: 4.8rem;
+  padding-bottom: 4.8rem;
+  &__container {
+    display: flex;
+  }
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    margin-right: 131px;
+    .site-logo {
+      margin-bottom: 55px;
+    }
+    ul {
+      display: flex;
+      align-items: center;
+      gap: 1.3rem;
+    }
+  }
+  &__sitenav {
+    margin-right: auto;
+    ul {
+      display: grid;
+      grid-template-columns: repeat(2, 160px);
+      column-gap: 30px;
+      row-gap: 8px;
+    }
+    a {
+      @include font(1.5rem, 2.6rem, 400, #ffff);
+    }
+  }
+  &__div {
+    text-align: right;
+  }
+  &__btn {
+    margin-bottom: 24px;
+  }
+  @include responsive(tablet) {
+  }
+}

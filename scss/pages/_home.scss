@@ -1,0 +1,101 @@
+.hero {
+  background: url("../images/hero-img.png"), $hero-articles-bg;
+  background-repeat: no-repeat;
+  background-position: right;
+  padding: 17rem 0;
+  &__text-wrapper {
+    width: 100%;
+    max-width: 447px;
+    h1 {
+      @include font(5.6rem, 6.4rem, 100, $text-color-2);
+      margin-bottom: 2.4rem;
+    }
+    p {
+      @include font(1.8rem, 2.8rem);
+      margin-bottom: 3.6rem;
+    }
+  }
+  @include responsive(tablet) {
+    background: $hero-articles-bg;
+    &__text-wrapper {
+      margin-right: auto;
+      margin-right: auto;
+      text-align: center;
+    }
+  }
+}
+.services {
+  background: $services-bg;
+  padding-top: 9.6rem;
+  padding-bottom: 9.4rem;
+  &__title {
+    @include font(4rem, 6.4rem, 100, $text-color-2);
+    margin-bottom: 16px;
+  }
+  &__desc {
+    @include font(1.8rem, 2.8rem);
+    margin-bottom: 72px;
+  }
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 255px);
+    column-gap: 30px;
+    row-gap: 32px;
+  }
+  &__item {
+    img {
+      margin-bottom: 40px;
+    }
+    h3 {
+      @include font(2.4rem, 2.8rem, 100, $text-color-2);
+      margin-bottom: 26px;
+    }
+  }
+  p {
+    @include font(1.6rem, 2.6rem);
+  }
+  @include responsive(tablet) {
+    &__list {
+      place-content: center;
+    }
+    &__item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+  }
+}
+.articles {
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+  background: $hero-articles-bg;
+  &__title {
+    @include font(4rem, 6.4rem, 100, #2d314d);
+    padding-bottom: 4rem;
+  }
+  &__list {
+    display: grid;
+    place-items: center;
+    grid-template-columns: repeat(auto-fill, 255px);
+    column-gap: 30px;
+  }
+  &__wrapper {
+    background: #ffffff;
+    border-radius: 5px;
+    padding: 2.4rem;
+  }
+  &__item {
+    h4 {
+      @include font(1rem, 1.8rem, 400, #9597a5);
+      padding-bottom: 0.8rem;
+    }
+    h5 {
+      @include font(1.6rem, 2rem, 100, #2d314d);
+      padding: 0.8rem 0;
+    }
+    p {
+      @include font(1.3rem, 1.8rem, 400, #9597a5);
+    }
+  }
+}
