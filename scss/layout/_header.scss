@@ -6,3 +6,9 @@
     justify-content: space-between;
   }
 }
+.sitenav {
+  &__item:hover a {
+    transition: 0.3s;
+    color: #30c88f;
+  }
+}

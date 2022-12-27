@@ -110,10 +110,19 @@ body {
   justify-content: space-between;
 }
 
+.sitenav__item:hover a {
+  transition: 0.3s;
+  color: #30c88f;
+}
+
 .footer {
   background: #2d314d;
   padding-top: 4.8rem;
   padding-bottom: 4.8rem;
+}
+.footer__sitenav li:hover a {
+  transition: 0.3s;
+  color: #30c88f;
 }
 .footer__container {
   display: flex;
@@ -131,6 +140,10 @@ body {
   align-items: center;
   gap: 1.3rem;
 }
+.footer__wrapper li:hover a path {
+  transition: 0.3s;
+  fill: #30c88f;
+}
 .footer__sitenav {
   margin-right: auto;
 }
@@ -140,6 +153,9 @@ body {
   -moz-column-gap: 30px;
        column-gap: 30px;
   row-gap: 8px;
+}
+.footer__sitenav li:hover {
+  color: #30c88f;
 }
 .footer__sitenav a {
   font-size: 1.5rem;
