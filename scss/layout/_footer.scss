@@ -10,11 +10,21 @@
   }
   &__container {
     display: flex;
+    flex-wrap: wrap;
+    @include responsive(mobile) {
+      flex-wrap: none;
+      align-items: center;
+      justify-content: center;
+    }
   }
   &__wrapper {
     display: flex;
     flex-direction: column;
     margin-right: 131px;
+    @include responsive(mobile) {
+      margin-right: 0;
+      margin-bottom: 32px;
+    }
     .site-logo {
       margin-bottom: 55px;
     }
@@ -29,12 +39,28 @@
     }
   }
   &__sitenav {
+    @include responsive(mobile) {
+      margin-right: 0;
+      text-align: center;
+    }
     margin-right: auto;
     ul {
       display: grid;
       grid-template-columns: repeat(2, 160px);
       column-gap: 30px;
       row-gap: 8px;
+      @include responsive(tablet) {
+        display: grid;
+        grid-template-columns: repeat(2, 160px);
+        column-gap: 30px;
+        row-gap: 8px;
+      }
+      @include responsive(mobile) {
+        display: grid;
+        grid-template-columns: repeat(1, 160px);
+        column-gap: 30px;
+        row-gap: 8px;
+      }
     }
     li:hover {
       color: #30c88f;
@@ -44,11 +70,17 @@
     }
   }
   &__div {
+    @include responsive(tablet) {
+      display: none;
+    }
     text-align: right;
+    @include responsive(mobile) {
+      text-align: center;
+      display: block;
+      margin-top: 3.2rem;
+    }
   }
   &__btn {
     margin-bottom: 24px;
-  }
-  @include responsive(tablet) {
   }
 }

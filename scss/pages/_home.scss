@@ -1,9 +1,16 @@
 .hero {
+  @include responsive(mobile) {
+    padding: 0 2.4rem 8.8rem;
+  }
   background: url("../images/hero-img.png"), $hero-articles-bg;
   background-repeat: no-repeat;
   background-position: right;
   padding: 17rem 0;
   &__text-wrapper {
+    @include responsive(tablet) {
+      margin-right: auto;
+      margin-left: auto;
+    }
     width: 100%;
     max-width: 447px;
     h1 {
@@ -28,6 +35,11 @@
   background: $services-bg;
   padding-top: 9.6rem;
   padding-bottom: 9.4rem;
+  &__wrapper {
+    @include responsive(tablet) {
+      text-align: center;
+    }
+  }
   &__title {
     @include font(4rem, 6.4rem, 100, $text-color-2);
     margin-bottom: 16px;
@@ -53,6 +65,9 @@
   }
   p {
     @include font(1.6rem, 2.6rem);
+    @include responsive(tablet) {
+      text-align: center;
+    }
   }
   @include responsive(tablet) {
     &__list {
@@ -79,6 +94,9 @@
     place-items: center;
     grid-template-columns: repeat(auto-fill, 255px);
     column-gap: 30px;
+    @include responsive(tablet) {
+      row-gap: 20px;
+    }
   }
   &__wrapper {
     background: #ffffff;
@@ -86,6 +104,12 @@
     padding: 2.4rem;
   }
   &__item {
+    @include responsive(tablet) {
+      margin-left: 150px;
+      @include responsive(mobile) {
+        margin-left: 50px;
+      }
+    }
     h4 {
       @include font(1rem, 1.8rem, 400, #9597a5);
       padding-bottom: 0.8rem;
@@ -96,6 +120,11 @@
     }
     p {
       @include font(1.3rem, 1.8rem, 400, #9597a5);
+    }
+  }
+  &__title {
+    @include responsive(tablet) {
+      text-align: center;
     }
   }
 }

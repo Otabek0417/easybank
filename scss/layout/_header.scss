@@ -5,10 +5,23 @@
     align-items: center;
     justify-content: space-between;
   }
+  @include responsive(tablet) {
+    padding: 2.3rem 0;
+  }
 }
 .sitenav {
   &__item:hover a {
     transition: 0.3s;
     color: #30c88f;
+  }
+  &__img {
+    display: none;
+  }
+  @include responsive(tablet) {
+    display: none;
+    &__img {
+      display: block;
+      border: none;
+    }
   }
 }

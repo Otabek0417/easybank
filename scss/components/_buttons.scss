@@ -8,3 +8,8 @@
 .btn:hover {
   background: linear-gradient(135deg, #2ab6d9 0%, #33d35e 58%);
 }
+.header__btn {
+  @include responsive(tablet) {
+    display: none ;
+  }
+}
